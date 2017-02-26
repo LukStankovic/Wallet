@@ -1,0 +1,531 @@
+.g-radek {
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+    display: table;
+    width: 100%;
+}
+
+.sl-1 {
+    margin-right: 20px;
+    width: calc(((100% / 12) * 1) - 19px);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+.sl-1:last-child {
+    margin-right: 0px;
+    width: calc((((100% / 12) * 1) - 2px) - 11px);
+}
+
+@media screen and (max-width: 767px) {
+    .sl-1, .sl-1:last-child {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .g-radek {
+        margin-bottom: 0;
+    }
+}
+
+.sl-2 {
+    margin-right: 20px;
+    width: calc(((100% / 12) * 2) - 19px);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+.sl-2:last-child {
+    margin-right: 0px;
+    width: calc((((100% / 12) * 2) - 2px) - 11px);
+}
+
+@media screen and (max-width: 767px) {
+    .sl-2, .sl-2:last-child {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .g-radek {
+        margin-bottom: 0;
+    }
+}
+
+.sl-3 {
+    margin-right: 20px;
+    width: calc(((100% / 12) * 3) - 19px);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+.sl-3:last-child {
+    margin-right: 0px;
+    width: calc((((100% / 12) * 3) - 2px) - 11px);
+}
+
+@media screen and (max-width: 767px) {
+    .sl-3, .sl-3:last-child {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .g-radek {
+        margin-bottom: 0;
+    }
+}
+
+.sl-4 {
+    margin-right: 20px;
+    width: calc(((100% / 12) * 4) - 19px);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+.sl-4:last-child {
+    margin-right: 0px;
+    width: calc((((100% / 12) * 4) - 2px) - 11px);
+}
+
+@media screen and (max-width: 767px) {
+    .sl-4, .sl-4:last-child {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .g-radek {
+        margin-bottom: 0;
+    }
+}
+
+.sl-5 {
+    margin-right: 20px;
+    width: calc(((100% / 12) * 5) - 19px);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+.sl-5:last-child {
+    margin-right: 0px;
+    width: calc((((100% / 12) * 5) - 2px) - 11px);
+}
+
+@media screen and (max-width: 767px) {
+    .sl-5, .sl-5:last-child {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .g-radek {
+        margin-bottom: 0;
+    }
+}
+
+.sl-6 {
+    margin-right: 20px;
+    width: calc(((100% / 12) * 6) - 19px);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+.sl-6:last-child {
+    margin-right: 0px;
+    width: calc((((100% / 12) * 6) - 2px) - 11px);
+}
+
+@media screen and (max-width: 767px) {
+    .sl-6, .sl-6:last-child {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .g-radek {
+        margin-bottom: 0;
+    }
+}
+
+.sl-7 {
+    margin-right: 20px;
+    width: calc(((100% / 12) * 7) - 19px);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+.sl-7:last-child {
+    margin-right: 0px;
+    width: calc((((100% / 12) * 7) - 2px) - 11px);
+}
+
+@media screen and (max-width: 767px) {
+    .sl-7, .sl-7:last-child {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .g-radek {
+        margin-bottom: 0;
+    }
+}
+
+.sl-8 {
+    margin-right: 20px;
+    width: calc(((100% / 12) * 8) - 19px);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+.sl-8:last-child {
+    margin-right: 0px;
+    width: calc((((100% / 12) * 8) - 2px) - 11px);
+}
+
+@media screen and (max-width: 767px) {
+    .sl-8, .sl-8:last-child {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .g-radek {
+        margin-bottom: 0;
+    }
+}
+
+.sl-9 {
+    margin-right: 20px;
+    width: calc(((100% / 12) * 9) - 19px);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+.sl-9:last-child {
+    margin-right: 0px;
+    width: calc((((100% / 12) * 9) - 2px) - 11px);
+}
+
+@media screen and (max-width: 767px) {
+    .sl-9, .sl-9:last-child {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .g-radek {
+        margin-bottom: 0;
+    }
+}
+
+.sl-10 {
+    margin-right: 20px;
+    width: calc(((100% / 12) * 10) - 19px);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+.sl-10:last-child {
+    margin-right: 0px;
+    width: calc((((100% / 12) * 10) - 2px) - 11px);
+}
+
+@media screen and (max-width: 767px) {
+    .sl-10, .sl-10:last-child {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .g-radek {
+        margin-bottom: 0;
+    }
+}
+
+.sl-11 {
+    margin-right: 20px;
+    width: calc(((100% / 12) * 11) - 19px);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+.sl-11:last-child {
+    margin-right: 0px;
+    width: calc((((100% / 12) * 11) - 2px) - 11px);
+}
+
+@media screen and (max-width: 767px) {
+    .sl-11, .sl-11:last-child {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .g-radek {
+        margin-bottom: 0;
+    }
+}
+
+.sl-12 {
+    margin-right: 20px;
+    width: calc(((100% / 12) * 12) - 19px);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+.sl-12:last-child {
+    margin-right: 0px;
+    width: calc((((100% / 12) * 12) - 2px) - 11px);
+}
+
+@media screen and (max-width: 767px) {
+    .sl-12, .sl-12:last-child {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .g-radek {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .obal {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .obal {
+        width: 750px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .obal {
+        width: 970px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .obal {
+        width: 1170px;
+        margin: 0 auto;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-weight: 600;
+    color: #33691E;
+}
+
+h2 {
+    font-weight: 400;
+    color: #27ae60;
+    font-size: 24px;
+}
+
+h3 {
+    font-weight: 300;
+    color: #27ae60;
+}
+
+@media screen and (max-width: 767px) {
+    h1, h2, h3 {
+        margin-left: 10px;
+    }
+}
+
+header {
+    width: 100%;
+    min-height: 50px;
+    background: #c61931;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    float: left;
+}
+
+nav ul li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0 15px;
+    -webkit-transition: 0.3s all ease;
+    -ms-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    transition: 0.3s all ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background: #e01c37;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 630px) {
+    nav .mobile--btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    nav .mobile--btn {
+        display: block;
+        font-size: 40px;
+        color: #fff;
+        right: 10px;
+        cursor: pointer;
+        line-height: 50px;
+        position: absolute;
+    }
+
+    nav ul {
+        display: none;
+        padding-top: 50px;
+    }
+
+    nav ul li {
+        float: none;
+    }
+
+    nav ul li a {
+        border-bottom: 1px dotted #e01c37;
+        width: 100%;
+    }
+
+    nav ul li:last-child a {
+        border-bottom: 0px;
+    }
+}
+
+.amcharts-export-menu.amcharts-export-menu-top-right.amExportButton {
+    top: -60px;
+}
+
+@media screen and (max-width: 767px) {
+    .amcharts-export-menu.amcharts-export-menu-top-right.amExportButton {
+        display: none;
+    }
+}
+
+.box {
+    width: 100%;
+    min-height: 150px;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    padding: 20px 0px;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.box__header {
+    font-size: 17px;
+}
+
+.box__data .box__temp {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+h2 input {
+    font-weight: 400;
+    color: #c61931;
+    font-size: 24px;
+    border: 0;
+    width: 55px;
+    border-bottom: 2px dotted #c61931;
+    text-align: center;
+}
+
+h2 input:focus {
+    outline: none;
+    border-bottom: 2px solid #c61931;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,173 @@
+@import "grid/grid";
+@import "config";
+
+$cervena: #c61931;
+$cervena-sv: #e01c37;
+$cervena-tm: #b1162c;
+
+@mixin prefixy($jmeno, $argument) {
+  -webkit-#{$jmeno}: #{$argument};
+  -ms-#{$jmeno}: #{$argument};
+  -moz-#{$jmeno}: #{$argument};
+  -o-#{$jmeno}: #{$argument};
+  #{$jmeno}: #{$argument};
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-weight: 600;
+  color: $greenText;
+}
+
+h2 {
+  font-weight: 400;
+  color: $green;
+  font-size: 24px;
+}
+
+h3 {
+  font-weight: 300;
+  color: $green;
+}
+
+@media screen and (max-width: $scr-xs-max) {
+  h1, h2, h3 {
+    margin-left: 10px;
+  }
+}
+
+// NAVIGACE
+// ========
+
+header {
+  width: 100%;
+  min-height: 50px;
+  background: $cervena;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  float: left;
+
+  a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0 15px;
+    @include prefixy(transition, 0.3s all ease);
+
+    &:hover, &.active {
+      background: $cervena-sv;
+      cursor: pointer;
+    }
+
+  }
+}
+
+@media screen and (min-width: 630px) {
+  nav .mobile--btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  nav .mobile--btn {
+    display: block;
+    font-size: 40px;
+    color: #fff;
+    right: 10px;
+    cursor: pointer;
+    line-height: 50px;
+    position: absolute;
+  }
+
+  nav ul {
+    display: none;
+    padding-top: 50px;
+  }
+
+  nav ul li {
+    float: none;
+
+    a {
+      border-bottom: 1px dotted $cervena-sv;
+      width: 100%;
+    }
+
+    &:last-child a {
+      border-bottom: 0px;
+    }
+  }
+
+}
+
+// DASHBORAD
+// =========
+// Slouží pro rychlé výpisy informací
+
+.amcharts-export-menu.amcharts-export-menu-top-right.amExportButton {
+  top: -60px;
+}
+
+@media screen and (max-width: $scr-xs-max) {
+  .amcharts-export-menu.amcharts-export-menu-top-right.amExportButton {
+    display: none;
+  }
+}
+
+// BOXÍKY
+// ------
+// - vždy barva boxu podle teploty
+
+.box {
+  width: 100%;
+  min-height: 150px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  padding: 20px 0px;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.box__header {
+  font-size: 17px;
+}
+
+.box__data {
+  .box__temp {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 300;
+  }
+}
+
+// INPUTY V NADPISECH
+
+h2 input {
+  font-weight: 400;
+  color: $cervena;
+  font-size: 24px;
+  border: 0;
+  width: 55px;
+  border-bottom: 2px dotted $cervena;
+  text-align: center;
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid $cervena;
+  }
+}
