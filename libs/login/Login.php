@@ -10,6 +10,8 @@ class Login {
 
 	private $status;
 
+	private $loggedID;
+
 	public function __construct($email, $pass) {
 		$this->email = $email;
 		$this->password = $pass;
@@ -18,12 +20,12 @@ class Login {
 
 	private function auth() {
 		$options = ['cost' => 13, 'salt' => $this->getSalt(),];
-		$res = dibi::query("SELECT `email` 
+		$res = dibi::query("SELECT `id`
 					FROM `users`
 					WHERE `email` = %s 
 					AND `pass` = %s", $this->email, password_hash($this->password, PASSWORD_BCRYPT, $options));
 
-		if ($res->fetchSingle()) {
+		if ($this->loggedID = $res->fetchSingle()) {
 			$this->status = 1;
 			return true;
 		} else {
@@ -51,5 +53,12 @@ class Login {
 	 */
 	public function getStatus() {
 		return $this->status;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getLoggedID() {
+		return $this->loggedID;
 	}
 }

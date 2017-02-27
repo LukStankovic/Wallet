@@ -1,0 +1,4 @@
+#RewriteEngine On
+#RewriteRule ^login pages/login.php
+#RewriteRule ^dashboard pages/dashboard.php
+#RewriteRule ^user/([0-9]+) user.php?id=$1
