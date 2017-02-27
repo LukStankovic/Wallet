@@ -13,7 +13,7 @@
 					<ul class="err">
 						{if $status == 0}
 							Špatný email, nebo heslo!
-						{else}
+						{elseif $status == 1}
 							Nyní se můžete přihlásit!
 						{/if}
 					</ul>
