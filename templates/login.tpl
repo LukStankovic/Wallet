@@ -7,16 +7,15 @@
 	<a href="register.php" class="regbtn">Registrovat se</a>
 	<div class="container">
 		<div class="login_blok">
-			<form name="login_formular" action="authlog.php" method="post">
+			<form name="login_formular" method="post">
 				<div id="login" class="blok_text">
 					<h1>Přihlášení</h1>
 					<ul class="err">
 						{if $status == 0}
 							Špatný email, nebo heslo!
-						{elseif $status == 1}
+						{/if}
+						{if $status == 1}
 							Nyní se můžete přihlásit!
-						{else}
-
 						{/if}
 					</ul>
 					<ul>
@@ -24,7 +23,7 @@
 						<li><input type="password" name="heslo" id="pass" placeholder="Heslo"></li>
 					</ul>
 				</div>
-				<button name="prihlasit" class="button" type="submit">Přihlásit</button>
+				<button name="login" class="button" type="submit">Přihlásit</button>
 			</form>
 		</div>
 	</div>

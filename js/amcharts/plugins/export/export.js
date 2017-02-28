@@ -32,7 +32,7 @@ if (!AmCharts.translations["export"]) {
 if (!AmCharts.translations["export"]["en"]) {
     AmCharts.translations["export"]["en"] = {
         "fallback.save.text": "CTRL + C to copy the data into the clipboard.",
-        "fallback.save.image": "Rightclick -> Save picture as... to save the image.",
+        "fallback.save.image": "Rightclick -> Save picture as... to Save the image.",
 
         "capturing.delayed.menu.label": "{{duration}}",
         "capturing.delayed.menu.title": "Click to cancel",
@@ -584,7 +584,7 @@ if (!AmCharts.translations["export"]["en"]) {
             },
 
             /**
-             * Generates download file; if unsupported offers fallback to save manually
+             * Generates download file; if unsupported offers fallback to Save manually
              */
             download: function (data, type, filename) {
                 // SAVE

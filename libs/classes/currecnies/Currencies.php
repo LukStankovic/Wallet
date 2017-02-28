@@ -2,15 +2,17 @@
 
 class Currencies {
 
-	private $data = array();
+	/**
+	 * @var array $data All nav items
+	 */
+	private $data = [];
 
+	/**
+	 * Currencies constructor.
+	 */
 	public function __construct() {
-		$res = dibi::query(
-			"SELECT `id`, `name` FROM `currencies`");
-		foreach ($res->fetchAll() as $key => $row) {
-			$this->data[$key]["id"] = $row["id"];
-			$this->data[$key]["name"] = $row["name"];
-		}
+		$res = dibi::query("SELECT `id`, `name` FROM `currencies`");
+		$this->data = $res->fetchAssoc("id");
 	}
 
 	/**

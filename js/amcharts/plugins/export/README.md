@@ -912,7 +912,7 @@ following.
 "export": {
   fallback: {
     text: "CTRL + C to copy the data into the clipboard.",
-    image: "Rightclick -> Save picture as... to save the image."
+    image: "Rightclick -> Save picture as... to Save the image."
   }
 }
 ```

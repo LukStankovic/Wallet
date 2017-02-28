@@ -2,6 +2,12 @@
 
 class Save {
 
+	/**
+	 * Check all given $_POSTS if are sets
+	 *
+	 * @param null $required
+	 * @return bool
+	 */
 	private function checkRequired($required = null) {
 		if($required != null) {
 			foreach ($required as $item) {
@@ -23,7 +29,13 @@ class Save {
 		}
 	}
 
-	public function saveAccount($required = null) {
+	/**
+	 * Save account
+	 *
+	 * @param null $required
+	 * @return int
+	 */
+	public function account($required = null) {
 		if ($this->checkRequired($required)) {
 			$arr = [
 				'id' => '',
@@ -35,6 +47,32 @@ class Save {
 			];
 			dibi::query('INSERT INTO [accounts]', $arr);
 			header("Location: accounts.php#view");
+		} else {
+			return 0;
+		}
+	}
+
+	/**
+	 * Save new registred user
+	 *
+	 * @param $required
+	 * @return int
+	 */
+	public function register($required) {
+		if ($this->checkRequired($required)) {
+			$options = array(
+				'cost' => 13,
+				'salt' => uniqid(mt_rand(),true));
+			$arr = [
+				'id' => '',
+				'email' => $_POST["email"],
+				'salt' => $options["salt"],
+				'pass' => password_hash($_POST["pass"], PASSWORD_BCRYPT, $options),
+				'fname' => $_POST["fname"],
+				'lname' => $_POST["lname"]
+			];
+			dibi::query('INSERT INTO [users]', $arr);
+			header("Location: login.php?status=1");
 		} else {
 			return 0;
 		}

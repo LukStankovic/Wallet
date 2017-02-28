@@ -1,7 +1,7 @@
 <?php
 
 /**
- * {make_nocache} Runtime Methods save(), store()
+ * {make_nocache} Runtime Methods Save(), store()
  *
  * @package    Smarty
  * @subpackage PluginsInternal

@@ -1531,7 +1531,7 @@
 	  arr.constructor = Buffer
 	  arr._isBuffer = true
 
-	  // save reference to original Uint8Array set method before overwriting
+	  // Save reference to original Uint8Array set method before overwriting
 	  arr._set = arr.set
 
 	  // deprecated
@@ -24536,7 +24536,7 @@
 	  this.check = 0;             /* protected copy of check value */
 	  this.total = 0;             /* protected copy of output count */
 	  // TODO: may be {}
-	  this.head = null;           /* where to save gzip header information */
+	  this.head = null;           /* where to Save gzip header information */
 
 	  /* sliding window */
 	  this.wbits = 0;             /* log base 2 of requested window size */
@@ -24794,7 +24794,7 @@
 	  var have, left;             /* available input and output */
 	  var hold;                   /* bit buffer */
 	  var bits;                   /* bits in bit buffer */
-	  var _in, _out;              /* save starting available input and output */
+	  var _in, _out;              /* Save starting available input and output */
 	  var copy;                   /* number of stored or match bytes to copy */
 	  var from;                   /* where to copy match bytes from */
 	  var from_source;
@@ -25900,7 +25900,7 @@
 	  state = strm.state;
 	  if ((state.wrap & 2) === 0) { return Z_STREAM_ERROR; }
 
-	  /* save header structure */
+	  /* Save header structure */
 	  state.head = head;
 	  head.done = false;
 	  return Z_OK;
@@ -26515,7 +26515,7 @@
 	    /* replicate for those indices with low len bits equal to huff */
 	    incr = 1 << (len - drop);
 	    fill = 1 << curr;
-	    min = fill;                 /* save offset to next table */
+	    min = fill;                 /* Save offset to next table */
 	    do {
 	      fill -= incr;
 	      table[next + (huff >> drop) + fill] = (here_bits << 24) | (here_op << 16) | here_val |0;
@@ -66427,7 +66427,7 @@
 					return;
 				}
 				// Object and web filesystem URLs have a problem saving in Google Chrome when
-				// viewed in a tab, so I force save with application/octet-stream
+				// viewed in a tab, so I force Save with application/octet-stream
 				// http://code.google.com/p/chromium/issues/detail?id=91158
 				// Update: Google errantly closed 91158, I submitted it again:
 				// https://code.google.com/p/chromium/issues/detail?id=389642
