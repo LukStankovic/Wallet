@@ -2,22 +2,48 @@
 
 class Login {
 
+	/**
+	 * @var string $email User`s e-mail
+	 */
 	private $email;
 
+	/**
+	 * @var string $password User`s password
+	 */
 	private $password;
 
+	/**
+	 * @var string $salt Salt for password
+	 */
 	private $salt;
 
+	/**
+	 * @var int $status 1 - logged
+	 */
 	private $status;
 
+	/**
+	 * @var int $loggedID User`s ID
+	 */
 	private $loggedID;
 
+	/**
+	 * Login constructor.
+	 *
+	 * @param $email
+	 * @param $pass
+	 */
 	public function __construct($email, $pass) {
 		$this->email = $email;
 		$this->password = $pass;
 		$this->auth();
 	}
 
+	/**
+	 * Authentication for login
+	 *
+	 * @return bool
+	 */
 	private function auth() {
 		$options = ['cost' => 13, 'salt' => $this->getSalt(),];
 		$res = dibi::query("SELECT `id`
@@ -34,6 +60,11 @@ class Login {
 		}
 	}
 
+	/**
+	 * Get salt for login from DB
+	 *
+	 * @return bool|mixed|string
+	 */
 	private function getSalt() {
 		$res = dibi::query("SELECT `salt`
 			FROM `users` 
@@ -42,6 +73,11 @@ class Login {
 		return $this->salt;
 	}
 
+	/**
+	 * Redirect to dashboard
+	 *
+	 * @return void
+	 */
 	public function redirect() {
 		if ($this->auth()) {
 			header("Location: dashboard.php");
@@ -49,6 +85,8 @@ class Login {
 	}
 
 	/**
+	 * Get user`s status
+	 *
 	 * @return int
 	 */
 	public function getStatus() {
@@ -56,7 +94,9 @@ class Login {
 	}
 
 	/**
-	 * @return mixed
+	 * Get ID of logged user
+	 *
+	 * @return int
 	 */
 	public function getLoggedID() {
 		return $this->loggedID;

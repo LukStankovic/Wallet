@@ -1,14 +1,12 @@
 <?php
-session_start();
 require_once "../config/config.php";
 require_once "../config/authses.php";
 
-
-$smarty->assign("menuitems", $nav->getData());
-$smarty->assign("selected", $nav->selected());
-$smarty->assign("allcur", $cur->getData());
-$smarty->assign("accounts", $acc->getData());
-$smarty->assign("settings", $settings);
+$smarty->assign("menuitems", $Navigation->getData());
+$smarty->assign("selected", $Navigation->selected());
+$smarty->assign("allcur", $Currencies->getData());
+$smarty->assign("accounts", $Accounts->getData());
+$smarty->assign("settings", $Settings->getData());
 $smarty->display("../templates/accounts.tpl");
 
-$save->saveAccount(array("name"));
+$Save->account(array ("name"));

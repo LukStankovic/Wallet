@@ -10042,7 +10042,7 @@ fabric.PatternBrush = fabric.util.createClass(fabric.PencilBrush, /** @lends fab
       var target = this.findTarget(e),
           pointer = this.getPointer(e, true);
 
-      // save pointer for check in __onMouseUp event
+      // Save pointer for check in __onMouseUp event
       this._previousPointer = pointer;
 
       var shouldRender = this._shouldRender(target, pointer),
@@ -22062,7 +22062,7 @@ fabric.Image.filters.BaseFilter = fabric.util.createClass(/** @lends fabric.Imag
       var cacheProp = this._getCacheProp(_char, styleDeclaration);
 
       // short-circuit if no styles for this char
-      // global style from object is always applyed and handled by save and restore
+      // global style from object is always applyed and handled by Save and restore
       if (!charDecl && this._charWidthsCache[cacheProp] && this.caching) {
         return this._charWidthsCache[cacheProp];
       }

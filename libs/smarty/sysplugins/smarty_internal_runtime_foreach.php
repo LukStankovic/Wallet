@@ -19,7 +19,7 @@ class Smarty_Internal_Runtime_Foreach {
 
 	/**
 	 * Init foreach loop
-	 *  - save item and key variables, named foreach property data if defined
+	 *  - Save item and key variables, named foreach property data if defined
 	 *  - init item and key variables, named foreach property data if required
 	 *  - count total if required
 	 *

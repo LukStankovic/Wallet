@@ -6188,7 +6188,7 @@ function InflateState() {
   this.check = 0;             /* protected copy of check value */
   this.total = 0;             /* protected copy of output count */
   // TODO: may be {}
-  this.head = null;           /* where to save gzip header information */
+  this.head = null;           /* where to Save gzip header information */
 
   /* sliding window */
   this.wbits = 0;             /* log base 2 of requested window size */
@@ -6446,7 +6446,7 @@ function inflate(strm, flush) {
   var have, left;             /* available input and output */
   var hold;                   /* bit buffer */
   var bits;                   /* bits in bit buffer */
-  var _in, _out;              /* save starting available input and output */
+  var _in, _out;              /* Save starting available input and output */
   var copy;                   /* number of stored or match bytes to copy */
   var from;                   /* where to copy match bytes from */
   var from_source;
@@ -7552,7 +7552,7 @@ function inflateGetHeader(strm, head) {
   state = strm.state;
   if ((state.wrap & 2) === 0) { return Z_STREAM_ERROR; }
 
-  /* save header structure */
+  /* Save header structure */
   state.head = head;
   head.done = false;
   return Z_OK;
@@ -7829,7 +7829,7 @@ module.exports = function inflate_table(type, lens, lens_index, codes, table, ta
     /* replicate for those indices with low len bits equal to huff */
     incr = 1 << (len - drop);
     fill = 1 << curr;
-    min = fill;                 /* save offset to next table */
+    min = fill;                 /* Save offset to next table */
     do {
       fill -= incr;
       table[next + (huff >> drop) + fill] = (here_bits << 24) | (here_op << 16) | here_val |0;

@@ -13,12 +13,12 @@
 
 					</ul>
 					<ul>
-						<li><input type="text" name="email" id="mail" placeholder="E-mail" required></li>
-						<li><input type="password" name="pass" id="pass" placeholder="Heslo" required></li>
-						<li><input type="text" name="fname" id="fname" placeholder="Jméno" required></li>
-						<li><input type="text" name="lname" id="lname" placeholder="Příjmení" required></li>
+						<li><input type="email" name="email" id="mail" class="req" placeholder="E-mail" required></li>
+						<li><input type="password" name="pass" id="pass" class="req" placeholder="Heslo" required></li>
+						<li><input type="text" name="fname" id="fname" class="req" placeholder="Jméno" required></li>
+						<li><input type="text" name="lname" id="lname" class="req" placeholder="Příjmení" required></li>
 					</ul>
-					<button name="registrovat" class="buttonreg" type="submit">Registrovat</button>
+					<button name="save" class="buttonreg" type="submit">Registrovat</button>
 				</div>
 			</form>
 		</div>

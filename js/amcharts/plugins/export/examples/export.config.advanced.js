@@ -114,7 +114,7 @@ AmCharts.exportCFG = {
        ** DELAYED EXPORT; automatical download
        */
       {
-        label: "Delayed save",
+        label: "Delayed Save",
         format: "png",
         delay: 2
       },
