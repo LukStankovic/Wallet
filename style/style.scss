@@ -113,6 +113,14 @@ nav ul li {
 
 }
 
+// KOMPONENTY
+// ==========
+
+.help {
+  font-size: 11px;
+  font-style: italic;
+}
+
 // DASHBORAD
 // =========
 // Slouží pro rychlé výpisy informací
@@ -129,7 +137,6 @@ nav ul li {
 
 // BOXÍKY
 // ------
-// - vždy barva boxu podle teploty
 
 .box {
   width: 100%;
@@ -140,11 +147,100 @@ nav ul li {
   padding: 20px 0px;
   box-sizing: border-box;
   border-radius: 3px;
+  text-decoration: none;
 }
 
 .box__header {
   font-size: 17px;
 }
+
+.box__actions {
+  font-size: 15px;
+  text-indent: 5px;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  font-weight: 100;
+}
+
+.box__owner {
+  font-size: 12px;
+  text-indent: 5px;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  font-weight: 100;
+}
+
+.add-new {
+  min-height: 60px;
+  cursor: pointer;
+}
+
+.box__value {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 300;
+}
+.box__desc {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+// BOX ÚČET
+// -------
+
+
+.account.box a{
+  width: 100%;
+  min-height: 150px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  padding: 20px 0px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  text-decoration: none;
+
+  .box__header {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .box__actions {
+    font-size: 15px;
+    text-indent: 5px;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    font-weight: 100;
+  }
+
+  .box__owner {
+    font-size: 11px;
+    text-indent: 5px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    font-weight: 100;
+  }
+
+  .box__value {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 300;
+  }
+  .box__desc {
+    font-size: 12px;
+    font-weight: 100;
+  }
+}
+
+
+// TLAČÍTKO
+// --------
 
 .add-new {
   min-height: 60px;
@@ -165,14 +261,6 @@ nav ul li {
   @include prefixy(transition, 0.3s all ease);
   &:hover {
     background: $greenHover;
-  }
-}
-.box__data {
-  .box__temp {
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-size: 25px;
-    font-weight: 300;
   }
 }
 
@@ -206,6 +294,9 @@ h2 input {
     border: 1px solid $green;
     outline: none !important;
   }
+}
+input[type=color].white {
+  padding: 0;
 }
 
 input.invalid, textarea.invalid {
