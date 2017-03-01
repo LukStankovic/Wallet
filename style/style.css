@@ -9,6 +9,7 @@
   margin-right: 20px;
   width: calc( ((100% / 12) * 1) - 19px);
   float: left;
+  text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -22,6 +23,7 @@
 @media screen and (max-width: 767px) {
   .sl-1, .sl-1:last-child {
     float: none;
+    text-align: left;
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px; }
@@ -32,6 +34,7 @@
   margin-right: 20px;
   width: calc( ((100% / 12) * 2) - 19px);
   float: left;
+  text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -45,6 +48,7 @@
 @media screen and (max-width: 767px) {
   .sl-2, .sl-2:last-child {
     float: none;
+    text-align: left;
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px; }
@@ -55,6 +59,7 @@
   margin-right: 20px;
   width: calc( ((100% / 12) * 3) - 19px);
   float: left;
+  text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -68,6 +73,7 @@
 @media screen and (max-width: 767px) {
   .sl-3, .sl-3:last-child {
     float: none;
+    text-align: left;
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px; }
@@ -78,6 +84,7 @@
   margin-right: 20px;
   width: calc( ((100% / 12) * 4) - 19px);
   float: left;
+  text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -91,6 +98,7 @@
 @media screen and (max-width: 767px) {
   .sl-4, .sl-4:last-child {
     float: none;
+    text-align: left;
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px; }
@@ -101,6 +109,7 @@
   margin-right: 20px;
   width: calc( ((100% / 12) * 5) - 19px);
   float: left;
+  text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -114,6 +123,7 @@
 @media screen and (max-width: 767px) {
   .sl-5, .sl-5:last-child {
     float: none;
+    text-align: left;
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px; }
@@ -124,6 +134,7 @@
   margin-right: 20px;
   width: calc( ((100% / 12) * 6) - 19px);
   float: left;
+  text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -137,6 +148,7 @@
 @media screen and (max-width: 767px) {
   .sl-6, .sl-6:last-child {
     float: none;
+    text-align: left;
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px; }
@@ -147,6 +159,7 @@
   margin-right: 20px;
   width: calc( ((100% / 12) * 7) - 19px);
   float: left;
+  text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -160,6 +173,7 @@
 @media screen and (max-width: 767px) {
   .sl-7, .sl-7:last-child {
     float: none;
+    text-align: left;
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px; }
@@ -170,6 +184,7 @@
   margin-right: 20px;
   width: calc( ((100% / 12) * 8) - 19px);
   float: left;
+  text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -183,6 +198,7 @@
 @media screen and (max-width: 767px) {
   .sl-8, .sl-8:last-child {
     float: none;
+    text-align: left;
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px; }
@@ -193,6 +209,7 @@
   margin-right: 20px;
   width: calc( ((100% / 12) * 9) - 19px);
   float: left;
+  text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -206,6 +223,7 @@
 @media screen and (max-width: 767px) {
   .sl-9, .sl-9:last-child {
     float: none;
+    text-align: left;
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px; }
@@ -216,6 +234,7 @@
   margin-right: 20px;
   width: calc( ((100% / 12) * 10) - 19px);
   float: left;
+  text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -229,6 +248,7 @@
 @media screen and (max-width: 767px) {
   .sl-10, .sl-10:last-child {
     float: none;
+    text-align: left;
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px; }
@@ -239,6 +259,7 @@
   margin-right: 20px;
   width: calc( ((100% / 12) * 11) - 19px);
   float: left;
+  text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -252,6 +273,7 @@
 @media screen and (max-width: 767px) {
   .sl-11, .sl-11:last-child {
     float: none;
+    text-align: left;
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px; }
@@ -262,6 +284,7 @@
   margin-right: 20px;
   width: calc( ((100% / 12) * 12) - 19px);
   float: left;
+  text-align: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -275,6 +298,7 @@
 @media screen and (max-width: 767px) {
   .sl-12, .sl-12:last-child {
     float: none;
+    text-align: left;
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px; }
@@ -370,6 +394,10 @@ nav ul li {
       width: 100%; }
     nav ul li:last-child a {
       border-bottom: 0px; } }
+.help {
+  font-size: 11px;
+  font-style: italic; }
+
 .amcharts-export-menu.amcharts-export-menu-top-right.amExportButton {
   top: -60px; }
 
@@ -384,10 +412,77 @@ nav ul li {
   font-weight: 600;
   padding: 20px 0px;
   box-sizing: border-box;
-  border-radius: 3px; }
+  border-radius: 3px;
+  text-decoration: none; }
 
 .box__header {
   font-size: 17px; }
+
+.box__actions {
+  font-size: 15px;
+  text-indent: 5px;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  font-weight: 100; }
+
+.box__owner {
+  font-size: 12px;
+  text-indent: 5px;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  font-weight: 100; }
+
+.add-new {
+  min-height: 60px;
+  cursor: pointer; }
+
+.box__value {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 300; }
+
+.box__desc {
+  font-size: 12px;
+  font-weight: 100; }
+
+.account.box a {
+  width: 100%;
+  min-height: 150px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  padding: 20px 0px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  text-decoration: none; }
+  .account.box a .box__header {
+    font-size: 16px;
+    margin-top: 10px; }
+  .account.box a .box__actions {
+    font-size: 15px;
+    text-indent: 5px;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    font-weight: 100; }
+  .account.box a .box__owner {
+    font-size: 11px;
+    text-indent: 5px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    font-weight: 100; }
+  .account.box a .box__value {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 300; }
+  .account.box a .box__desc {
+    font-size: 12px;
+    font-weight: 100; }
 
 .add-new {
   min-height: 60px;
@@ -411,12 +506,6 @@ nav ul li {
   transition: 0.3s all ease; }
   .add-new a:hover {
     background: #2ecc71; }
-
-.box__data .box__temp {
-  margin-top: 15px;
-  margin-bottom: 10px;
-  font-size: 25px;
-  font-weight: 300; }
 
 h2 input {
   font-weight: 400;
@@ -446,6 +535,9 @@ h2 input {
   .white:focus {
     border: 1px solid #27ae60;
     outline: none !important; }
+
+input[type=color].white {
+  padding: 0; }
 
 input.invalid, textarea.invalid {
   border: 1px solid #c61931; }

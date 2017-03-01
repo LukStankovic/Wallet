@@ -44,6 +44,7 @@ class Save {
 				'name' => $_POST["name"],
 				'icon' => $_POST["icon"],
 				'desc' => $_POST["desc"],
+				'color' => $_POST["color"],
 			];
 			dibi::query('INSERT INTO [accounts]', $arr);
 			header("Location: accounts.php#view");

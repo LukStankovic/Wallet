@@ -13,6 +13,31 @@ if(file_exists("../config/dbconnect_overlay.php")) {
 }
 
 /**
+ * CLASSES
+ * =======
+ */
+	/**
+	 * Navigation
+	 * ----------
+	 */
+	require_once "../libs/classes/navigation/Navigation.php";
+	$Navigation = new Navigation;
+
+	/**
+	 * Currencies
+	 * ----------
+	 */
+	require_once "../libs/classes/currecnies/Currencies.php";
+	$Currencies = new Currencies;
+
+	/**
+	 * Accounts
+	 * --------
+	 */
+	require_once "../libs/classes/accounts/Accounts.php";
+	$Accounts = new Accounts;
+
+/**
  * LIBRARIES
  * =========
  */
@@ -55,28 +80,3 @@ if(file_exists("../config/dbconnect_overlay.php")) {
 	Debugger::enable();
 	Debugger::DEVELOPMENT;
 	Debugger::$strictMode = TRUE;
-
-/**
- * CLASSES
- * =======
- */
-	/**
-	 * Navigation
-	 * ----------
-	 */
-	require_once "../libs/classes/navigation/Navigation.php";
-	$Navigation = new Navigation;
-
-	/**
-	 * Currencies
-	 * ----------
-	 */
-	require_once "../libs/classes/currecnies/Currencies.php";
-	$Currencies = new Currencies;
-
-	/**
-	 * Accounts
-	 * --------
-	 */
-	require_once "../libs/classes/accounts/Accounts.php";
-	$Accounts = new Accounts;
