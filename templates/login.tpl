@@ -19,7 +19,7 @@
 						{/if}
 					</ul>
 					<ul>
-						<li><input type="text" name="email" id="mail" placeholder="E-mail"></li>
+						<li><input type="email" name="email" id="mail" placeholder="E-mail"></li>
 						<li><input type="password" name="heslo" id="pass" placeholder="Heslo"></li>
 					</ul>
 				</div>
