@@ -78,4 +78,27 @@ class Save {
 			return 0;
 		}
 	}
+
+	/**
+	 * Save new money record
+	 *
+	 * @param $required
+	 * @return int
+	 */
+	public function moneyRecord($required) {
+		if ($this->checkRequired($required)) {
+			$arr = [
+				'id' => '',
+				'id_user' => $_SESSION["logged_id"],
+				'id_account' => $_POST["account"],
+				'title' => $_POST["title"],
+				'amount' => $_POST["amount"],
+				'added' => $_POST["added"],
+				'desc' => $_POST["desc"],
+			];
+			dibi::query('INSERT INTO [money_records]', $arr);
+		} else {
+			return 0;
+		}
+	}
 }

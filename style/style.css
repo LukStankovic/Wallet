@@ -434,10 +434,6 @@ nav ul li {
   left: 3px;
   font-weight: 100; }
 
-.add-new {
-  min-height: 60px;
-  cursor: pointer; }
-
 .box__value {
   margin-top: 15px;
   margin-bottom: 10px;
@@ -484,11 +480,11 @@ nav ul li {
     font-size: 12px;
     font-weight: 100; }
 
-.add-new {
+.add-new, .showBlock {
   min-height: 60px;
   cursor: pointer; }
 
-.add-new a {
+.add-new a, .showBlock {
   display: block;
   background: #27ae60;
   min-height: 60px;
@@ -504,7 +500,7 @@ nav ul li {
   -moz-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease; }
-  .add-new a:hover {
+  .add-new a:hover, .showBlock:hover {
     background: #2ecc71; }
 
 h2 input {
@@ -562,5 +558,11 @@ input.valid, textarea.valid {
     background: #2ecc71; }
 .btn--right {
   float: right; }
+
+.block--add-new {
+  display: none;
+  margin: 0 5px; }
+  .block--add-new h2 {
+    margin-top: 0; }
 
 /*# sourceMappingURL=style.css.map */

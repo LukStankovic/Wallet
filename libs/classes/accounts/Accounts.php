@@ -35,13 +35,13 @@ class Accounts {
 		}
 
 		if(!is_null($this->userID)) {
-			$res = dibi::query("
-			SELECT A.`id`, A.`id_user`, A.`id_currency`, A.`name` AS `account_name`, A.`icon`, A.`desc`, A.`color`,
+			$res = dibi::query(
+				"SELECT A.`id`, A.`id_user`, A.`id_currency`, A.`name` AS `account_name`, A.`icon`, A.`desc`, A.`color`,
 				C.`code`, C.`name` as `currency_name`, C.`currency_unit`, CONCAT(U.`fname`, ' ', U.`lname`) as `owner`
-			FROM `accounts` A 
-				JOIN `currencies` C ON A.`id_currency` = C.`id`
-				JOIN `users` U ON A.`id_user` = U.`id`
-			WHERE A.`id_user` = %i", $this->userID);
+				FROM `accounts` A 
+					JOIN `currencies` C ON A.`id_currency` = C.`id`
+					JOIN `users` U ON A.`id_user` = U.`id`
+				WHERE A.`id_user` = %i", $this->userID);
 			$this->data = $res->fetchAssoc("id");
 		} else {
 			$this->data = null;
@@ -70,8 +70,8 @@ class Accounts {
 	 */
 
 	public function sumTotalBalances($userID) {
-		$res = dibi::query("
-			SELECT A.`id` AS `id_account`, IFNULL(SUM(MR.`amount`),0) AS `balance`
+		$res = dibi::query(
+			"SELECT A.`id` AS `id_account`, IFNULL(SUM(MR.`amount`),0) AS `balance`
 			FROM `accounts` A
 				LEFT JOIN `money_records` MR ON A.`id` = MR.`id_account`
 			WHERE A.`id_user` = %i
@@ -90,8 +90,8 @@ class Accounts {
 	 * @return void
 	 */
 	public function latestAdd($userID) {
-		$res = dibi::query("
-			SELECT A.`id`, 
+		$res = dibi::query(
+			"SELECT A.`id`, 
 				IFNULL(DATE_FORMAT(MAX(MR.`added`),'%e. %c. %Y %k:%i'),'-') AS `datetime`, 
 				IFNULL(MR.`amount`,'-') AS `latest_amount`
 			FROM `accounts` A
@@ -104,6 +104,14 @@ class Accounts {
 			$this->data[$key]["latest_datetime"] = $item["datetime"];
 			$this->data[$key]["latest_amount"] = $item["latest_amount"];
 		}
+	}
+
+	public function getLatestRecords($limit) {
+		$res = dibi::query(
+			"SELECT *
+			FROM `money_records`
+			LIMIT %i", $limit);
+		return $res->fetchAssoc("id");
 	}
 
 	/**

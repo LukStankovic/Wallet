@@ -37,7 +37,7 @@ h3 {
 
 @media screen and (max-width: $scr-xs-max) {
   h1, h2, h3 {
-    margin-left: 10px;
+	margin-left: 10px;
   }
 }
 
@@ -61,54 +61,54 @@ nav ul li {
   float: left;
 
   a {
-    color: #fff;
-    display: block;
-    text-decoration: none;
-    line-height: 50px;
-    padding: 0 15px;
-    @include prefixy(transition, 0.3s all ease);
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	line-height: 50px;
+	padding: 0 15px;
+	@include prefixy(transition, 0.3s all ease);
 
-    &:hover, &.active {
-      background: $greenHover;
-      cursor: pointer;
-    }
+	&:hover, &.active {
+	  background: $greenHover;
+	  cursor: pointer;
+	}
 
   }
 }
 
 @media screen and (min-width: 630px) {
   nav .mobile--btn {
-    display: none;
+	display: none;
   }
 }
 
 @media screen and (max-width: 630px) {
   nav .mobile--btn {
-    display: block;
-    font-size: 40px;
-    color: #fff;
-    right: 10px;
-    cursor: pointer;
-    line-height: 50px;
-    position: absolute;
+	display: block;
+	font-size: 40px;
+	color: #fff;
+	right: 10px;
+	cursor: pointer;
+	line-height: 50px;
+	position: absolute;
   }
 
   nav ul {
-    display: none;
-    padding-top: 50px;
+	display: none;
+	padding-top: 50px;
   }
 
   nav ul li {
-    float: none;
+	float: none;
 
-    a {
-      border-bottom: 1px dotted $greenHover;
-      width: 100%;
-    }
+	a {
+	  border-bottom: 1px dotted $greenHover;
+	  width: 100%;
+	}
 
-    &:last-child a {
-      border-bottom: 0px;
-    }
+	&:last-child a {
+	  border-bottom: 0px;
+	}
   }
 
 }
@@ -131,7 +131,7 @@ nav ul li {
 
 @media screen and (max-width: $scr-xs-max) {
   .amcharts-export-menu.amcharts-export-menu-top-right.amExportButton {
-    display: none;
+	display: none;
   }
 }
 
@@ -172,11 +172,6 @@ nav ul li {
   font-weight: 100;
 }
 
-.add-new {
-  min-height: 60px;
-  cursor: pointer;
-}
-
 .box__value {
   margin-top: 15px;
   margin-bottom: 10px;
@@ -204,37 +199,37 @@ nav ul li {
   text-decoration: none;
 
   .box__header {
-    font-size: 16px;
-    margin-top: 10px;
+	font-size: 16px;
+	margin-top: 10px;
   }
 
   .box__actions {
-    font-size: 15px;
-    text-indent: 5px;
-    position: absolute;
-    top: 0px;
-    right: 5px;
-    font-weight: 100;
+	font-size: 15px;
+	text-indent: 5px;
+	position: absolute;
+	top: 0px;
+	right: 5px;
+	font-weight: 100;
   }
 
   .box__owner {
-    font-size: 11px;
-    text-indent: 5px;
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    font-weight: 100;
+	font-size: 11px;
+	text-indent: 5px;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	font-weight: 100;
   }
 
   .box__value {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-size: 25px;
-    font-weight: 300;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 25px;
+	font-weight: 300;
   }
   .box__desc {
-    font-size: 12px;
-    font-weight: 100;
+	font-size: 12px;
+	font-weight: 100;
   }
 }
 
@@ -242,12 +237,12 @@ nav ul li {
 // TLAČÍTKO
 // --------
 
-.add-new {
+.add-new, .showBlock {
   min-height: 60px;
   cursor: pointer;
 }
 
-.add-new a{
+.add-new a, .showBlock{
   display: block;
   background: $green;
   min-height: 60px;
@@ -260,7 +255,7 @@ nav ul li {
   text-decoration: none;
   @include prefixy(transition, 0.3s all ease);
   &:hover {
-    background: $greenHover;
+	background: $greenHover;
   }
 }
 
@@ -276,8 +271,8 @@ h2 input {
   text-align: center;
 
   &:focus {
-    outline: none;
-    border-bottom: 2px solid $green;
+	outline: none;
+	border-bottom: 2px solid $green;
   }
 }
 
@@ -291,8 +286,8 @@ h2 input {
   resize: vertical;
   @include prefixy("box-sizing", "border-box");
   &:focus {
-    border: 1px solid $green;
-    outline: none !important;
+	border: 1px solid $green;
+	outline: none !important;
   }
 }
 input[type=color].white {
@@ -309,20 +304,29 @@ input.valid, textarea.valid {
 
 .btn {
   &--confirm {
-    background: $green;
-    color: #fff;
-    padding: 0 30px;
-    line-height: 40px;
-    border-radius: 3px;
-    border: 0;
-    cursor: pointer;
-    @include prefixy("transition","all 0.3s ease");
-    &:hover {
-      background: $greenHover;
-    }
+	background: $green;
+	color: #fff;
+	padding: 0 30px;
+	line-height: 40px;
+	border-radius: 3px;
+	border: 0;
+	cursor: pointer;
+	@include prefixy("transition","all 0.3s ease");
+	&:hover {
+	  background: $greenHover;
+	}
   }
 
   &--right{
-    float: right;
+	float: right;
   }
+}
+
+// ADD NEW BLOCK
+.block--add-new {
+	display: none;
+	margin: 0 5px;
+	h2{
+	  margin-top: 0;
+	}
 }
