@@ -4,7 +4,7 @@
 		<ul>
 			{foreach from=$menuitems item=$item}
 				<li>
-					<a href="{$item.url}" {if $selected == $item.url}class="active"{/if}>
+					<a href="{$item.clean_url}" {if $selected == $item.url}class="active"{/if}>
 						<i class="fa fa-{$item.icon}" aria-hidden="true"></i> {$item.translate}
 					</a>
 				</li>
