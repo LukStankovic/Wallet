@@ -1,6 +1,7 @@
 RewriteEngine On
 #tmp řešení
 RewriteRule ^login pages/login.php
+RewriteRule ^registrace pages/register.php
 RewriteRule ^dashboard pages/dashboard.php
 RewriteRule ^ucty pages/accounts.php
 RewriteRule ^kategorie pages/categories.php

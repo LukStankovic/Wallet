@@ -32,7 +32,11 @@
 					<input type="color" class="white" name="color" value="#27AE60" placeholder="Barva účtu">
 				</div>
 				<div class="sl-6">
-					sdílení
+					<select name="share[]" multiple>
+						{foreach from=$users item=$user}
+							<option value="{$user.id}">{$user.fname} {$user.lname}</option>
+						{/foreach}
+					</select>
 				</div>
 			</div>
 			<div class="g-radek">
@@ -61,8 +65,7 @@
 			</div>
 		</div>
 		<h2>Účty</h2>
-        {counter start=1 skip=1 assign="count" print=false}
-
+		{counter start=1 skip=1 assign="count" print=false}
 		{foreach from=$accounts item=$account}
 			{if $count % 5 == 0 || $count == 1}
 			<div class="g-radek">
@@ -81,8 +84,12 @@
 									{$account.balance} {$account.currency_unit}
 								</div>
 								<div class="box__desc">
-									{$account.latest_datetime} ~ {$account.latest_amount} {$account.currency_unit} <br>
-									{$account.latest_record_title}
+									{(isset($account.latest_datetime)) ? $account.latest_datetime : ''}
+									~
+									{(isset($account.latest_amount)) ? $account.latest_amount : ''}
+									{(isset($account.currency_unit)) ? $account.currency_unit : ''}
+									<br>
+									{(isset($account.latest_record_title)) ? $account.latest_record_title : 'Žádné záznamy'}
 								</div>
 							</div>
 						</a>

@@ -37,6 +37,7 @@ class Save {
 	 */
 	public function account($required = null) {
 		if ($this->checkRequired($required)) {
+
 			$arr = [
 				'id' => '',
 				'id_user' => $_SESSION["logged_id"],
@@ -45,9 +46,10 @@ class Save {
 				'icon' => $_POST["icon"],
 				'desc' => $_POST["desc"],
 				'color' => $_POST["color"],
+				'share' => (isset($_POST["share"]) ? serialize($_POST["share"]) : "")
 			];
 			dibi::query('INSERT INTO [accounts]', $arr);
-			header("Location: accounts.php#view");
+			header("Location: ucty#view");
 		} else {
 			return 0;
 		}
