@@ -37,6 +37,13 @@ if(file_exists("../config/dbconnect_overlay.php")) {
 	require_once "../libs/classes/accounts/Accounts.php";
 	$Accounts = new Accounts;
 
+	/**
+	 * Users
+	 * -----
+	 */
+	require_once "../libs/classes/users/Users.php";
+	$Users = new Users;
+
 /**
  * LIBRARIES
  * =========
@@ -68,6 +75,14 @@ if(file_exists("../config/dbconnect_overlay.php")) {
 	$smarty->debugging = false;
 	$smarty->caching = false;
 	$smarty->cache_lifetime = 0;
+
+	$smarty->assign("menuitems", $Navigation->getData());
+	$smarty->assign("selected", $Navigation->selected());
+	$smarty->assign("allcur", $Currencies->getData());
+	$smarty->assign("accounts", $Accounts->getData());
+	$smarty->assign("settings", $Settings->getData());
+	$smarty->assign("users", $Users->getAllUsers());
+	$smarty->assign("latestRecords", $Accounts->getLatestRecords($Users->getLoggedUser()));
 
 	/**
 	 * Tracy

@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="../style/login.css" type="text/css">
 {/block}
 {block name="body"}
-	<a href="register.php" class="regbtn">Registrovat se</a>
+	<a href="registrace" class="regbtn">Registrovat se</a>
 	<div class="container">
 		<div class="login_blok">
 			<form name="login_formular" method="post">

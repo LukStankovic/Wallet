@@ -24,17 +24,17 @@
 						<input name="title" type="text" placeholder="Název" class="white req" required>
 					</div>
 					<div class="sl-2">
-						<input name="amount" type="number" placeholder="Částka" class="white req" required>
-					</div>
-					<div class="sl-2">
-						<input name="type" type="text" placeholder="Typ" class="white req" required>
-					</div>
-					<div class="sl-2">
 						<select name="account">
 							{foreach from=$accounts item=$account}
 								<option value="{$account.id}">{$account.account_name}</option>
 							{/foreach}
 						</select>
+					</div>
+					<div class="sl-2">
+						<input name="type" type="text" placeholder="Typ" class="white req" required>
+					</div>
+					<div class="sl-2">
+						<input name="amount" type="number" placeholder="Částka" class="white req" required>
 					</div>
 					<div class="sl-2">
 						<input name="added" type="datetime-local" placeholder="Datum a čas" class="white req" required>
