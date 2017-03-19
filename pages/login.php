@@ -38,6 +38,6 @@ if(isset($_POST["login"])) {
 		$_SESSION["logged_id"] = $Login->getLoggedID();
 		$Login->redirect();
 	} else {
-		header("Location: login.php?status=0");
+		header("Location: login?status=0");
 	}
 }

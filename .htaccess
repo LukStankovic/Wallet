@@ -1,4 +1,7 @@
-#RewriteEngine On
-#RewriteRule ^login pages/login.php
-#RewriteRule ^dashboard pages/dashboard.php
-#RewriteRule ^user/([0-9]+) user.php?id=$1
+RewriteEngine On
+#tmp řešení
+RewriteRule ^login pages/login.php
+RewriteRule ^dashboard pages/dashboard.php
+RewriteRule ^ucty pages/accounts.php
+RewriteRule ^kategorie pages/categories.php
+RewriteRule ^nastaveni pages/settings.php

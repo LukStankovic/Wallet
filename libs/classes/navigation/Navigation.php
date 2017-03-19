@@ -12,7 +12,7 @@ class Navigation {
 	 */
 	public function __construct() {
 		$res = dibi::query(
-				"SELECT `id`, `name`, `url`, `translate`, `icon`
+				"SELECT `id`, `name`, `clean_url` as `url`, `translate`, `icon`
 				FROM `pages`
 				ORDER BY `order`"
 		);

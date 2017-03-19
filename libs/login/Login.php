@@ -80,7 +80,7 @@ class Login {
 	 */
 	public function redirect() {
 		if ($this->auth()) {
-			header("Location: dashboard.php");
+			header("Location: dashboard");
 		}
 	}
 
