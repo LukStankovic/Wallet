@@ -51,9 +51,28 @@
 		</div>
 		<div class="g-radek">
 			<h2>Poslední přidané záznamy</h2>
-			{$latestRecords|@var_dump} <br>
-			{foreach from="latestRecords" item="record"}
-			{/foreach}
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Titulek</th>
+						<th>Účet</th>
+						<th>Čas</th>
+						<th>Částka</th>
+					</tr>
+				</thead>
+				<tbody>
+					{foreach from=$latestRecords item=$record}
+						<tr>
+							<td>{$record.title}</td>
+							<td>{$record.name}</td>
+							<td>{$record.added}</td>
+							<td>{$record.amount} {$record.currency_unit}</td>
+						</tr>
+					{/foreach}
+				</tbody>
+
+
+			</table>
 		</div>
 	</div>
 {/block}

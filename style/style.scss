@@ -322,11 +322,32 @@ input.valid, textarea.valid {
   }
 }
 
-// ADD NEW BLOCK
+// ADD NEW - block
 .block--add-new {
 	display: none;
 	margin: 0 5px;
 	h2{
 	  margin-top: 0;
+	}
+}
+
+// TABLES
+
+.table {
+  	width: 100%;
+  	border-collapse: collapse;
+	thead th {
+	  background-color: #fff;
+	  border-bottom: 2px solid $green;
+	}
+
+  	tbody {
+	  tr:nth-child(even) td {
+		background: rgba(123, 245, 174, 0.15);
+	  }
+	  td {
+		padding: 10px;
+		text-align: center;
+	  }
 	}
 }

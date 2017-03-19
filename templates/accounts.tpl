@@ -81,7 +81,8 @@
 									{$account.balance} {$account.currency_unit}
 								</div>
 								<div class="box__desc">
-									{$account.latest_datetime} ~ {$account.latest_amount} {$account.currency_unit}
+									{$account.latest_datetime} ~ {$account.latest_amount} {$account.currency_unit} <br>
+									{$account.latest_record_title}
 								</div>
 							</div>
 						</a>

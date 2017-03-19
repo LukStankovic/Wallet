@@ -71,7 +71,7 @@ class Accounts {
 
 	public function sumTotalBalances($userID) {
 		$res = dibi::query(
-			"SELECT A.`id` AS `id_account`, IFNULL(SUM(MR.`amount`),0) AS `balance`
+			"SELECT A.`id` AS `id_account`, IFNULL(SUM(MR.`amount`), 0) AS `balance`
 			FROM `accounts` A
 				LEFT JOIN `money_records` MR ON A.`id` = MR.`id_account`
 			WHERE A.`id_user` = %i
@@ -91,25 +91,32 @@ class Accounts {
 	 */
 	public function latestAdd($userID) {
 		$res = dibi::query(
-			"SELECT A.`id`, 
-				IFNULL(DATE_FORMAT(MAX(MR.`added`),'%e. %c. %Y %k:%i'),'-') AS `datetime`, 
-				IFNULL(MR.`amount`,'-') AS `latest_amount`
-			FROM `accounts` A
-				LEFT JOIN `money_records` MR ON A.`id` = MR.`id_account`
-			WHERE A.`id_user` = %i
-			GROUP BY A.`id`", $userID
+			"SELECT A.`id`, IFNULL(DATE_FORMAT(MR.`added`,'%e. %c. %Y %k:%i'),'-') AS `datetime`,
+				IFNULL(MR.`amount`,'-') AS `latest_amount`, MR.`title` as `latest_record_title`
+			FROM `money_records` MR
+				JOIN `accounts` A ON MR.`id_account` = A.`id`
+			WHERE `added` IN (
+			    SELECT MAX(`added`)
+			    FROM `money_records`
+			    GROUP BY `id_account`)
+			AND A.`id_user` = %i", $userID
 		);
 		$this->latest = $res->fetchAssoc("id");
 		foreach($this->latest as $key => $item) {
 			$this->data[$key]["latest_datetime"] = $item["datetime"];
 			$this->data[$key]["latest_amount"] = $item["latest_amount"];
+			$this->data[$key]["latest_record_title"] = $item["latest_record_title"];
 		}
 	}
 
-	public function getLatestRecords($limit) {
+	public function getLatestRecords($limit = 5) {
 		$res = dibi::query(
-			"SELECT *
-			FROM `money_records`
+			"SELECT MR.`id`, MR.`title`, MR.`amount`, DATE_FORMAT(MR.`added`, '%e. %c. %Y %k:%i') AS 'added', 
+				MR.`desc`, A.`name`, C.`currency_unit`
+			FROM `money_records` MR
+				JOIN `accounts` A ON MR.`id_account` = A.`id`
+				JOIN `currencies` C ON A.`id_currency` = C.`id`
+			ORDER BY MR.`added` DESC
 			LIMIT %i", $limit);
 		return $res->fetchAssoc("id");
 	}
