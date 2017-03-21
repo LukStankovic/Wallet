@@ -31,7 +31,11 @@
 						</select>
 					</div>
 					<div class="sl-2">
-						<input name="type" type="text" placeholder="Typ" class="white req" required>
+						<select name="category">
+							{foreach from=$categories item=$category}
+								<option value="{$category.id}">{$category.name}</option>
+							{/foreach}
+						</select>
 					</div>
 					<div class="sl-2">
 						<input name="amount" type="number" placeholder="Částka" class="white req" required>
@@ -54,6 +58,7 @@
 			<table class="table">
 				<thead>
 					<tr>
+						<th></th>
 						<th>Titulek</th>
 						<th>Účet</th>
 						<th>Čas</th>
@@ -63,6 +68,7 @@
 				<tbody>
 					{foreach from=$latestRecords item=$record}
 						<tr>
+							<td><i class="fa fa-{$record.icon}"></i></td>
 							<td>{$record.title}</td>
 							<td>{$record.name}</td>
 							<td>{$record.added}</td>

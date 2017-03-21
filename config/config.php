@@ -44,6 +44,13 @@ if(file_exists("../config/dbconnect_overlay.php")) {
 	require_once "../libs/classes/users/Users.php";
 	$Users = new Users;
 
+	/**
+	 * Categories
+	 * ----------
+	 */
+	require_once "../libs/classes/categories/Categories.php";
+	$Categories = new Categories;
+
 /**
  * LIBRARIES
  * =========
@@ -81,6 +88,7 @@ if(file_exists("../config/dbconnect_overlay.php")) {
 	$smarty->assign("allcur", $Currencies->getData());
 	$smarty->assign("accounts", $Accounts->getData());
 	$smarty->assign("settings", $Settings->getData());
+	$smarty->assign("categories", $Categories->getAllCategories());
 	$smarty->assign("users", $Users->getAllUsers());
 	$smarty->assign("latestRecords", $Accounts->getLatestRecords($Users->getLoggedUser()));
 

@@ -150,10 +150,11 @@ class Accounts {
 		$res = dibi::query(
 			"SELECT IFNULL(MR.`id`,'-') AS `id`, IFNULL(MR.`title`,'-') AS `title`, IFNULL(MR.`amount`,'-') as `amount`,
 				IFNULL(DATE_FORMAT(MR.`added`, '%e. %c. %Y %k:%i'),'-') AS 'added', IFNULL(MR.`desc`,'-') AS `desc`,
-				A.`name`, C.`currency_unit`
+				A.`name`, C.`currency_unit`, CAT.`icon`
 			FROM `money_records` MR
 				JOIN `accounts` A ON MR.`id_account` = A.`id`
 				JOIN `currencies` C ON A.`id_currency` = C.`id`
+				JOIN `categories` CAT ON MR.`id_category` = CAT.`id`
 			WHERE MR.`id_user` = %i
 			ORDER BY MR.`added` DESC
 			LIMIT %i", $userId, $limit);

@@ -321,6 +321,9 @@
   .obal {
     width: 1170px;
     margin: 0 auto; } }
+.ta_left {
+  text-align: left !important; }
+
 body {
   margin: 0;
   padding: 0;
@@ -570,7 +573,8 @@ input.valid, textarea.valid {
   border-collapse: collapse; }
   .table thead th {
     background-color: #fff;
-    border-bottom: 2px solid #27ae60; }
+    border-bottom: 2px solid #27ae60;
+    padding: 5px 10px; }
   .table tbody tr:nth-child(even) td {
     background: rgba(123, 245, 174, 0.15); }
   .table tbody td {

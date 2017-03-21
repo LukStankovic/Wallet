@@ -75,7 +75,7 @@ class Save {
 				'lname' => $_POST["lname"]
 			];
 			dibi::query('INSERT INTO [users]', $arr);
-			header("Location: login.php?status=1");
+			header("Location: login?status=1");
 		} else {
 			return 0;
 		}
@@ -89,6 +89,7 @@ class Save {
 	 */
 	public function moneyRecord($required) {
 		if ($this->checkRequired($required)) {
+
 			$arr = [
 				'id' => '',
 				'id_user' => $_SESSION["logged_id"],
@@ -97,8 +98,10 @@ class Save {
 				'amount' => $_POST["amount"],
 				'added' => $_POST["added"],
 				'desc' => $_POST["desc"],
+				'id_category' => $_POST["category"],
 			];
 			dibi::query('INSERT INTO [money_records]', $arr);
+			header("Location: dashboard");
 		} else {
 			return 0;
 		}

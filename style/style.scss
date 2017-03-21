@@ -1,5 +1,6 @@
 @import "grid/grid";
 @import "config";
+@import "inline";
 
 $cervena: #c61931;
 $cervena-sv: #e01c37;
@@ -339,6 +340,7 @@ input.valid, textarea.valid {
 	thead th {
 	  background-color: #fff;
 	  border-bottom: 2px solid $green;
+	  padding: 5px 10px;
 	}
 
   	tbody {
